@@ -5,5 +5,8 @@ import PackageDescription
 let package = Package(
     name: "swift-http-link-header",
     products: [.library(name: "HTTPLinkHeader", targets: ["HTTPLinkHeader"])],
-    targets: [.target(name: "HTTPLinkHeader")]
+    targets: [
+        .target(name: "HTTPLinkHeader"),
+        .testTarget(name: "HTTPLinkHeaderTests", dependencies: ["HTTPLinkHeader"]),
+    ]
 )
